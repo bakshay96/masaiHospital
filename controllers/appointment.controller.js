@@ -16,7 +16,7 @@ const appointment = async(req,res)=>{
 const getAppointmentsData = async(req,res)=>{
     
     try {
-        const data=AppointmentModel.find();
+        const data=await AppointmentModel.find();
         
        
         res.status(200).send({"msg":"Data successfully recived ",data})
